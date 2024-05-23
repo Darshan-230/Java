@@ -23,14 +23,24 @@ public class Area {
     }
 
     public void setDim() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter length of rectangle: ");
-        length = scanner.nextDouble();
+        // Scanner scanner = new Scanner(System.in);
+        // System.out.print("Enter length of rectangle: ");
+        // length = scanner.nextDouble();
 
-        System.out.print("Enter breadth of rectangle: ");
-        breadth = scanner.nextDouble();
+        // System.out.print("Enter breadth of rectangle: ");
+        // breadth = scanner.nextDouble();
 
-        scanner.close();
+        // scanner.close();
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        try{
+            System.out.println("Enter length: ");
+            this.length = Integer.parseInt(br.readLine());
+            System.out.println("Enter breadth: ");
+            this.breadth = Integer.parseInt(br.readLine());
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Enter numeric value only");
+        }
     }
 
     public double getArea() {
