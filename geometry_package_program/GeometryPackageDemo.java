@@ -10,7 +10,7 @@ public class GeometryPackageDemo {
         System.out.println("Area of circle: "+String.format("%.2f", circle.getArea()));
         System.out.println("Perimeter of circle: "+String.format("%.2f",circle.getPerimeter()));
 
-        Triangle triangle = new Triangle(3, 4, 5);
+        Triangle triangle = new Triangle(5, 8);
         System.out.println("Area of triangle: "+String.format("%.2f",triangle.getArea()));
         System.out.println("Perimeter of triangle: "+String.format("%.2f", triangle.getPerimeter()));
 

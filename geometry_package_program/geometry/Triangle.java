@@ -1,19 +1,19 @@
 package geometry_package_program.geometry;
 
 public class Triangle {
-    private  double a,b,c;
+    private  double base, height;
 
-    public Triangle(int a, int b, int c) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
+    public Triangle(double base, double height) {
+        this.base = base;
+        this.height = height;
     }
+
 
     public double getArea(){
-        double semiperimeter = (a + b + c) / 2;
-        return Math.sqrt(semiperimeter * (semiperimeter - a) * (semiperimeter - b) * (semiperimeter - c));
+       return (base * height) / 2;
     }
     public double getPerimeter(){
-        return (a+b+c);
+        double hypotenuse = Math.sqrt(base * base + height * height);
+        return (base + height + hypotenuse);
     }
 }
